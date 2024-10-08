@@ -23,7 +23,7 @@ Diwali-Sales-Data-Python_Analysis/
 ## 1. Import Required Libraries
 
 This project imports the necessary libraries for data processing and visualization:
-```
+```python
 import pandas as pd  # For data manipulation and analysis
 import numpy as np  # For numerical computations
 import seaborn as sns  # For data visualization
