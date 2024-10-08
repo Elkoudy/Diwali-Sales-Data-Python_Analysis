@@ -23,7 +23,7 @@ Diwali-Sales-Data-Python_Analysis/
 ## 1. Import Required Libraries
 
 This project imports the necessary libraries for data processing and visualization:
-
+```
 import pandas as pd  # For data manipulation and analysis
 import numpy as np  # For numerical computations
 import seaborn as sns  # For data visualization
@@ -32,24 +32,27 @@ import plotly.express as px  # For interactive visualizations
 import time  # For time-related tasks
 import re  # For string manipulation and pattern matching
 import os  # For interacting with the operating system
+```
 
 ## 2. Load the Dataset
 
-Load the uncleaned dataset into a pandas DataFrame:
+Let's start by loading the uncleaned dataset into a pandas DataFrame. This will allow us to manipulate and analyze the data effectively.
 
+```python
 # Get the current working directory
-pwd = os.getcwd()  # Storing the current directory path
+pwd = os.getcwd()  # Store the current directory path
 
 # Load the uncleaned dataset into a pandas DataFrame
-dataset = pd.read_csv(pwd + "/Diwali Sales Data.csv", encoding='ISO-8859-1')  # Reading the CSV file into a DataFrame
+dataset = pd.read_csv(pwd + "/Diwali Sales Data.csv", encoding='ISO-8859-1')  # Read the CSV file into a DataFrame
 
 # Create a copy of the original dataset to work on
 df = dataset.copy()  # Making a copy to avoid altering the original data
+```
 
 ## 3. Initial Data Inspection
 
 Inspect the dataset to understand its structure and content:
-
+```python
 # Display 5 random samples from the dataset
 df.sample(5)
 
@@ -79,19 +82,19 @@ df = df.dropna()
 
 # Convert the 'Amount' column to integer type
 df["Amount"] = df["Amount"].astype(int)
-
+```
 ## 4. Summary Statistics
-
+```python
 Inspect summary statistics for numeric and categorical columns.
 
 # Display value counts for object type columns
 for i in df.select_dtypes(include="object").columns:
     print(f"Value Counts for {i}:\n", df[i].value_counts())
-
+```
 ## 5. Exploratory Data Analysis (EDA)
 
 The following EDA techniques are applied to gain insights into the dataset:
-
+```python
 ### 5.1 Gender Distribution
 
 ax = sns.countplot(x="Gender", hue="Gender", data=df)
@@ -112,7 +115,7 @@ sns.barplot(x="Gender", y="Amount", hue="Gender", data=gender_amount_data)
 plt.show()
 
 ### etc.
-
+```
 ## 6. Required Libraries
 Ensure you have the following libraries installed in your Python environment:
 
