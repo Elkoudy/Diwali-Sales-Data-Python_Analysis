@@ -84,6 +84,7 @@ df = df.dropna()
 df["Amount"] = df["Amount"].astype(int)
 ```
 ## 4. Summary Statistics
+
 ```python
 Inspect summary statistics for numeric and categorical columns.
 
@@ -119,19 +120,23 @@ plt.show()
 ## 6. Required Libraries
 Ensure you have the following libraries installed in your Python environment:
 
-pandas
-numpy
-seaborn
-matplotlib
-plotly
-scikit-learn
+- `pandas`
+- `numpy`
+- `seaborn`
+- `matplotlib`
+- `plotly`
+- `scikit-learn`
 
 You can install these libraries using pip:
 
-pip install pandas numpy seaborn matplotlib plotly scikit-learn
+```bash
+pip install pandas numpy seaborn matplotlib scikit-learn
+```
 
 ## 7. Usage
+
 To run the analysis, open the Jupyter notebook Diwali_sales.ipynb and execute each cell sequentially. Visualizations and insights will be generated based on the data analysis performed.
 
 ## 8. Author
+
 Elkoudy
